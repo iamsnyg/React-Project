@@ -11,6 +11,7 @@ export default {
       fontFamily: {
         'Nerko': ['Nerko+One', 'cursive'],
         'display': ['Matemasie', 'sans-serif'],
+        'map': ['Poppins', 'sans-serif'],
       
       }
     },
