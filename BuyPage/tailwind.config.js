@@ -12,8 +12,14 @@ export default {
         'Nerko': ['Nerko+One', 'cursive'],
         'display': ['Matemasie', 'sans-serif'],
         'map': ['Poppins', 'sans-serif'],
-      
+      },
+      fontSize: {
+        "10xl": '108px'
+      },
+      lineHeight: {
+        'lineHeight': '90px'
       }
+
     },
   },
   plugins: [],
