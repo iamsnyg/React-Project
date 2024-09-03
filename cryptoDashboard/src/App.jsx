@@ -1,4 +1,5 @@
-
+import React from 'react'
+import Dashboard from './pages/Dashboard/Dashboard'
 import './App.css'
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
 
   return (
     <>
-    <h1>Hello</h1>
+      <Dashboard />
     </>
   )
 }
