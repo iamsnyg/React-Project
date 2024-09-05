@@ -2,7 +2,7 @@ import { Box, HStack, Icon, Menu, MenuButton, MenuItem, MenuList } from '@chakra
 import React from 'react'
 import { MdAccountCircle } from "react-icons/md";
 
-function TopNav() {
+function TopNav({title, parent}) {
   return (
     <Box
     className='shadow-md'
@@ -10,7 +10,7 @@ function TopNav() {
         <HStack
         className='h-16 flex justify-between max-w-7xl px-32 mx-auto '
         >
-            <h1 className='text-3xl font-medium '>Dashboard</h1>
+            <h1 className='text-3xl font-medium '>{title}</h1>
 
             <Menu>
                 <MenuButton>
@@ -20,6 +20,7 @@ function TopNav() {
                 <MenuList>
                     <MenuItem>Logout</MenuItem>
                     <MenuItem>Support</MenuItem>
+                    
                 </MenuList>
             </Menu>
         </HStack>
