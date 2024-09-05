@@ -8,7 +8,7 @@ function TopNav({title, parent}) {
     className='shadow-md'
     >
         <HStack
-        className='h-16 flex justify-between max-w-7xl px-32 mx-auto '
+        className='h-16 flex justify-between max-w-6xl  mx-auto '
         >
             <h1 className='text-3xl font-medium '>{title}</h1>
 
