@@ -10,15 +10,16 @@ function TopNav({title, toggleSidebar, isSidebarVisible}) {
 
   return (
     <Box
-    className='shadow-md px-4'
+    
     >
         <HStack
-        className='h-16 flex justify-between max-w-6xl  mx-auto '
+        className='h-16 flex justify-between max-w-6xl  mx-auto border-l-2 border-solid border-blue-950'
         >
             <button
             onClick={toggleSidebar}
+            className='lg:hidden'
             >
-                {isSidebarVisible ? "" : <TfiMenuAlt/>}
+                {isSidebarVisible ? "" : <TfiMenuAlt/> }
             
             </button>
 

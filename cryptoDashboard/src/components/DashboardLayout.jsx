@@ -13,25 +13,36 @@ function DashboardLayout({title, children}) {
     setSidebarVisible(!isSidebarVisible);
   };
 
+  console.log(isSidebarVisible);
+  
+
   return (
-    <div
-    className='flex h-screen overflow-hidden'
-    >
+    <div className="flex h-screen overflow-hidden">
       <SideNav isVisible={isSidebarVisible} closeSidebar={toggleSidebar} />
 
-      <Box flexGrow={1}>
-        <TopNav
-          title={title}
-          toggleSidebar={toggleSidebar}
-          isSidebarVisible={isSidebarVisible}
-          className={`${isSidebarVisible ? "" : ""}`}
-        />
+      
+        <Box flexGrow={1}>
+          <TopNav
+            title={title}
+            toggleSidebar={toggleSidebar}
+            isSidebarVisible={isSidebarVisible}
+          />
 
-        <Container maxW="72rem" bg="red" p={4}>
-          {children}
-        </Container>
-      </Box>
-    </div>
+
+          <Container
+            maxW="72rem"
+            bg="red"
+            p={4}
+            className={`${
+              isSidebarVisible ? 'ml-64' : 'ml-0'
+            }`}
+            
+          >
+            {children}
+          </Container>
+        </Box>
+      </div>
+    
   );
 }
 
