@@ -1,9 +1,10 @@
 import { Box, HStack, Icon, Stack } from '@chakra-ui/react'
-import React from 'react'
+import React, { useState } from 'react'
 import { PiSquaresFourFill} from "react-icons/pi";
 import { TbArrowsDoubleNwSe } from "react-icons/tb";
 import { BiSupport } from "react-icons/bi";
-function SideNav() {
+
+function SideNav({ isVisible, closeSidebar}) {
 
     const sideNavLinks=[
         {
@@ -19,9 +20,19 @@ function SideNav() {
         },
     ]
   return (
-    <Box >
-        <Stack className='flex justify-between  max-w-64 h-screen '>
-            <Box>
+    <Box className={`fixed inset-y-0 left-0 w-64 bg-gray-800 text-white p-4 
+        ${isVisible ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 lg:static lg:flex-shrink-0`}>
+        <Stack className={`flex justify-between  max-w-64 h-screen 
+        
+        `}>
+            <Box
+            >
+                <button
+                onClick={closeSidebar}
+                className={`p-2 bg-red-500 text-black rounded-full lg:hidden`}
+                >
+                    X
+                </button>
                 <h1 className='text-xl pt-16 font-bold text-center'>Crypto Dashboard</h1>
                 <Box className='mt-6 mx-3'>
                     {sideNavLinks.map((nav)=>{

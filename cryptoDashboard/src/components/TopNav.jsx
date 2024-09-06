@@ -1,15 +1,29 @@
 import { Box, HStack, Icon, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react'
-import React from 'react'
+import React, { useState } from 'react'
 import { MdAccountCircle } from "react-icons/md";
+import { TfiMenuAlt } from "react-icons/tfi";
+import SideNav from './SideNav';
+import DashboardLayout from './DashboardLayout';
 
-function TopNav({title, parent}) {
+
+function TopNav({title, toggleSidebar, isSidebarVisible}) {
+
   return (
     <Box
-    className='shadow-md'
+    className='shadow-md px-4'
     >
         <HStack
         className='h-16 flex justify-between max-w-6xl  mx-auto '
         >
+            <button
+            onClick={toggleSidebar}
+            >
+                {isSidebarVisible ? "" : <TfiMenuAlt/>}
+            
+            </button>
+
+            
+            
             <h1 className='text-3xl font-medium '>{title}</h1>
 
             <Menu>
