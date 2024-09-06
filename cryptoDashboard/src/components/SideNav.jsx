@@ -20,7 +20,7 @@ function SideNav({ isVisible, closeSidebar}) {
         },
     ]
   return (
-    <Box className={`fixed inset-y-0 left-0 w-64 bg-gray-800 text-white p-4 
+    <Box className={`fixed inset-y-0 left-0 w-64 p-4 
         ${isVisible ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 lg:static lg:flex-shrink-0`}>
         <Stack className={`flex justify-between  max-w-64 h-screen 
         
