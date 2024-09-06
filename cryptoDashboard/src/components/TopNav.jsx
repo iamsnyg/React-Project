@@ -16,16 +16,13 @@ function TopNav({title, toggleSidebar, isSidebarVisible}) {
         className='h-16 flex justify-between max-w-6xl  mx-auto border-l-2 border-solid border-blue-950'
         >
             <button
-            onClick={toggleSidebar}
-            className='lg:hidden'
+                onClick={toggleSidebar}
+                className='lg:hidden block'
             >
-                {isSidebarVisible ? "" : <TfiMenuAlt/> }
-            
+                {isSidebarVisible ? "" : <TfiMenuAlt />}
             </button>
 
-            
-            
-            <h1 className='text-3xl font-medium '>{title}</h1>
+            <h1 className='text-2xl lg:text-3xl font-medium text-center lg:text-left'>{title}</h1>
 
             <Menu>
                 <MenuButton>
