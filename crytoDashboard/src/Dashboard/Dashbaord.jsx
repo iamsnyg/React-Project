@@ -1,8 +1,11 @@
 import React from 'react'
+import SideNav from '../components/SideNav'
 
 function Dashbaord() {
   return (
-    <div>Dashbaord</div>
+    <div>
+        <SideNav />
+    </div>
   )
 }
 
