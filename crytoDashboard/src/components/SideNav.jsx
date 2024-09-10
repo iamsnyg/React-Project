@@ -19,7 +19,7 @@ function SideNav() {
     
     ]
 return (
-    <div className=" max-w-64 min-h-screen ">
+    <div className=" max-w-64 min-h-screen bg-gray-400">
         <div className="flex flex-col justify-between h-screen">
 
             <div
