@@ -30,10 +30,11 @@ function TopNav() {
   return (
 
     <div className='w-screen bg-gray-300 h-16'>
-        
-        <div className='flex justify-between items-center h-0 pb-3 mx-36 '>
+        {/* <div className=''>
+            <TfiMenuAlt />
+        </div> */}
 
-        <div className='w-screen bg-gray-300 h-16'>
+        
         
 
 
@@ -56,8 +57,7 @@ function TopNav() {
                         )
                     }
                 </button>
-            </div>
-        </div>
+            
         
     </div>
     </div>
