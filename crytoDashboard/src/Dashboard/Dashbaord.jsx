@@ -1,10 +1,10 @@
 import React from 'react'
-import Layout from '../components/DashBoardLayout/Layout'
+import SideNav from '../components/SideNav'
 
 function Dashbaord() {
   return (
     <div>
-      <Layout />
+        <SideNav />
     </div>
   )
 }

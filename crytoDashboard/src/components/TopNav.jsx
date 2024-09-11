@@ -1,6 +1,9 @@
 import React from 'react'
 import { MdAccountCircle } from "react-icons/md";
+<<<<<<< HEAD
 import { TfiMenuAlt } from "react-icons/tfi";
+=======
+>>>>>>> 03595d2064d9470f0681b9a9fc1a6937861ff0f5
 
 
 function TopNav() {
@@ -26,6 +29,7 @@ function TopNav() {
         setToggle(!toggle)
     }
   return (
+<<<<<<< HEAD
     <div className='w-screen bg-gray-300 h-16'>
         <div
         className='
@@ -36,6 +40,13 @@ function TopNav() {
         </div>
         <div
         className='flex justify-between items-center h-0 pb-3 mx-36 '
+
+    <div
+    className='w-screen bg-gray-300 h-16'
+    >
+        <div 
+        className='flex justify-between items-center p-4 mx-36'
+
         >
             <h1
             className='text-2xl font-bold  
