@@ -3,8 +3,10 @@ import React from "react";
 import { PiSquaresFourFill } from "react-icons/pi";
 import { TbArrowsDoubleNeSw } from "react-icons/tb";
 import { BiSupport } from "react-icons/bi";
+import { IoClose } from "react-icons/io5";
 
-function SideNav() {
+
+function SideNav({ isVisible, closeSidebar}) {
 
     const navLinks=[
         {
@@ -18,8 +20,18 @@ function SideNav() {
         
     
     ]
+    // max-w-64 min-h-screen bg-gray-400
 return (
-    <div className=" max-w-64 min-h-screen bg-gray-400">
+    <div 
+    className={`fixed top-0 left-0 w-64 h-screen bg-gray-400 transition-all duration-300 ${isVisible ?  '-ml-64': 'ml-0'}`}     
+        >
+        <div>
+            <button
+            onClick={closeSidebar}
+            >
+                <IoClose />
+            </button>
+        </div>
         <div className="flex flex-col justify-between h-screen">
 
             <div

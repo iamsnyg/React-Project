@@ -3,7 +3,7 @@ import { MdAccountCircle } from "react-icons/md";
 
 import { TfiMenuAlt } from "react-icons/tfi";
 
-function TopNav() {
+function TopNav({toggleSidebar, isSidebarVisible}) {
   const toggleLinks = [
     {
       title: "Home",
@@ -25,13 +25,18 @@ function TopNav() {
     setToggle(!toggle);
   };
   return (
-    <div className="w-screen bg-gray-300 h-16">
+    <nav className={`w-screen h-16 ${
+        isSidebarVisible ?  'ml-0':'ml-64' 
+      }`}>
       
 
       <div className="flex ">
-      <div className="p-8">
+      <button 
+      onClick={toggleSidebar}
+      // className='lg:hidden block'
+      >
         <TfiMenuAlt />
-      </div>
+      </button>
         <div
         className="flex justify-between items-center w-full p-4 mx-36 "
         >
@@ -50,7 +55,7 @@ function TopNav() {
         </button>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
 
